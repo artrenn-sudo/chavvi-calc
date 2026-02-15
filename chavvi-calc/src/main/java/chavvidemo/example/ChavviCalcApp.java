@@ -32,6 +32,11 @@ public class ChavviCalcApp {
 				valA = getFloatInput("Enter a number for A: ");
 			} else if (command.equals("b")) {
 				valB = getFloatInput("Enter a number for B: ");
+			} else if (command.equals("c")) {
+				// clear variables
+				valA = 0.0f;
+				valB = 0.0f;
+				System.out.println("Values cleared.");
 			} else {
 				System.out.println("Unknown command: " + command + "Try again.");
 			}
