@@ -17,8 +17,11 @@ public class ChavviCalcApp {
 	public static void main(String[] args) {
 		System.out.println("Chavvi's Calculator:");
 
-		// call menu function
-		printMenu();
+		// main loop
+		boolean running = true;
+		while (running) {
+			printMenu() // call menu function
+		}
 	}
 
 	/**
