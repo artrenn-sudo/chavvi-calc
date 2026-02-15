@@ -1,6 +1,6 @@
 package chavvidemo.example;
 
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * Chavvi Calc - Menu Implementation
