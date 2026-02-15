@@ -24,6 +24,8 @@ public class ChavviCalcApp {
 			if (command.equals("q")) {
 				System.out.println("Quit ChavviCalc!");
 				running = false; // Stop the loop (Dừng vòng lặp)
+			} else {
+				System.out.println("Unknown command: " + command + "Try again.");
 			}
 			String command = scanner.nextLine().trim();
 		}
