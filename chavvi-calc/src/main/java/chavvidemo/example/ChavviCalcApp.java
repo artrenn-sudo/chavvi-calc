@@ -37,6 +37,12 @@ public class ChavviCalcApp {
 				valA = 0.0f;
 				valB = 0.0f;
 				System.out.println("Values cleared.");
+			} else if (command.equals("+")) {
+				float result = valA + valB;
+				System.out.printf("%.3f + %.3f = %.3f%n", valA, valB, result);
+			} else if (command.equals("-")) {
+				float result = valA - valB;
+				System.out.printf("%.3f - %.3f = %.3f%n", valA, valB, result);
 			} else {
 				System.out.println("Unknown command: " + command + "Try again.");
 			}
