@@ -4,7 +4,7 @@ package chavvidemo.example;
  * Chavvi Calc - Menu Implementation
  *
  */
-public class App {
+public class ChavviCalcApp {
 
 	// Global variables:
 	private static float valA = 0.0f;
