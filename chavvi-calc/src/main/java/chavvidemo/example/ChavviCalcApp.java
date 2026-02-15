@@ -46,6 +46,13 @@ public class ChavviCalcApp {
 			} else if (command.equals("*")) {
 				float result = valA * valB;
 				System.out.printf("%.3f * %.3f = %.3f%n", valA, valB, result);
+			} else if (command.equals("/")) {
+				if (valB == 0) {
+					System.out.println("Error: Division by zero is not allowed.");
+				} else {
+					float result = valA / valB;
+					System.out.printf("%.3f / %.3f = %.3f%n", valA, valB, result);
+				}
 			} else {
 				System.out.println("Unknown command: " + command + "Try again.");
 			}
