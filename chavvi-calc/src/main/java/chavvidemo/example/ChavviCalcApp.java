@@ -21,13 +21,16 @@ public class ChavviCalcApp {
 		boolean running = true;
 		while (running) {
 			printMenu(); // call menu function
+
+			// read input
+			String command = scanner.nextLine().trim().toLowerCase();
+
 			if (command.equals("q")) {
 				System.out.println("Quit ChavviCalc!");
 				running = false; // Stop the loop (Dừng vòng lặp)
 			} else {
 				System.out.println("Unknown command: " + command + "Try again.");
 			}
-			String command = scanner.nextLine().trim();
 		}
 	}
 
@@ -48,5 +51,25 @@ public class ChavviCalcApp {
 		System.out.println("c : Clear A and B");
 		System.out.println("q : Quit");
 		System.out.print("Enter command: ");
+	}
+
+	/**
+	 * Helper to get number from user
+	 */
+	private static float getFloatInput(String prompt) {
+		float value = 0.0f;
+		boolean valid = false;
+
+		while (!valid) {
+			try {
+				System.out.print(prompt);
+				String input = scanner.nextLine().trim();
+				value = Float.parseFloat(input);
+				valid = true; // exit if parsing succeeds
+			} catch (NumberFormatException e) {
+				System.out.println("Error: Invalid number.");
+			}
+		}
+		return value;
 	}
 }
