@@ -20,7 +20,12 @@ public class ChavviCalcApp {
 		// main loop
 		boolean running = true;
 		while (running) {
-			printMenu() // call menu function
+			printMenu(); // call menu function
+			if (command.equals("q")) {
+				System.out.println("Quit ChavviCalc!");
+				running = false; // Stop the loop (Dừng vòng lặp)
+			}
+			String command = scanner.nextLine().trim();
 		}
 	}
 
