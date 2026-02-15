@@ -28,6 +28,10 @@ public class ChavviCalcApp {
 			if (command.equals("q")) {
 				System.out.println("Quit ChavviCalc!");
 				running = false; // Stop the loop (Dừng vòng lặp)
+			} else if (command.equals("a")) {
+				valA = getFloatInput("Enter a number for A: ");
+			} else if (command.equals("b")) {
+				valB = getFloatInput("Enter a number for B: ");
 			} else {
 				System.out.println("Unknown command: " + command + "Try again.");
 			}
