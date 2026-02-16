@@ -23,6 +23,7 @@ public class ChavviCalcApp {
 		while (running) {
 
 			// read input
+			System.out.print("\nEnter command (h for menu): ");
 			String command = scanner.nextLine().trim().toLowerCase();
 
 			if (command.equals("q")) {
@@ -53,8 +54,10 @@ public class ChavviCalcApp {
 					float result = valA / valB;
 					System.out.printf("%.3f / %.3f = %.3f%n", valA, valB, result);
 				}
+			} else if (command.equals("h")) {
+				printMenu(); // print menu on demand
 			} else {
-				System.out.println("Unknown command: " + command + "Try again.");
+				System.out.println("Unknown command: " + command + " Try again.");
 			}
 		}
 	}
