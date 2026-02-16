@@ -26,38 +26,57 @@ public class ChavviCalcApp {
 			System.out.print("\nEnter command: ");
 			String command = scanner.nextLine().trim().toLowerCase();
 
-			if (command.equals("q")) {
-				System.out.println("Quit ChavviCalc!");
-				running = false; // Stop the loop (Dừng vòng lặp)
-			} else if (command.equals("h")) {
-				printMenu(); // print menu on demand
-			} else if (command.equals("a")) {
-				valA = getFloatInput("Enter a number for A: ");
-			} else if (command.equals("b")) {
-				valB = getFloatInput("Enter a number for B: ");
-			} else if (command.equals("c")) {
-				// clear variables
-				valA = 0.0f;
-				valB = 0.0f;
-				System.out.println("Values cleared.");
-			} else if (command.equals("+")) {
-				float result = valA + valB;
-				System.out.printf("%.3f + %.3f = %.3f%n", valA, valB, result);
-			} else if (command.equals("-")) {
-				float result = valA - valB;
-				System.out.printf("%.3f - %.3f = %.3f%n", valA, valB, result);
-			} else if (command.equals("*")) {
-				float result = valA * valB;
-				System.out.printf("%.3f * %.3f = %.3f%n", valA, valB, result);
-			} else if (command.equals("/")) {
-				if (valB == 0) {
-					System.out.println("Error: Division by zero.");
-				} else {
-					float result = valA / valB;
-					System.out.printf("%.3f / %.3f = %.3f%n", valA, valB, result);
-				}
-			} else {
-				System.out.println("Unknown command: " + command + ". Try again.");
+			switch (command) {
+				case "q":
+					System.out.println("Quit ChavviCalc!");
+					running = false; // Stop the loop
+					break;
+
+				case "h":
+					printMenu(); // print menu on demand
+					break;
+
+				case "a":
+					valA = getFloatInput("Enter a number for A: ");
+					break;
+
+				case "b":
+					valB = getFloatInput("Enter a number for B: ");
+					break;
+
+				case "c":
+					valA = 0.0f;
+					valB = 0.0f;
+					System.out.println("Values cleared.");
+					break;
+
+				case "+":
+					float sum = valA + valB;
+					System.out.printf("%.3f + %.3f = %.3f%n", valA, valB, sum);
+					break;
+
+				case "-":
+					float diff = valA - valB;
+					System.out.printf("%.3f - %.3f = %.3f%n", valA, valB, diff);
+					break;
+
+				case "*":
+					float prod = valA * valB;
+					System.out.printf("%.3f * %.3f = %.3f%n", valA, valB, prod);
+					break;
+
+				case "/":
+					if (valB == 0) {
+						System.out.println("Error: Division by zero.");
+					} else {
+						float quot = valA / valB;
+						System.out.printf("%.3f / %.3f = %.3f%n", valA, valB, quot);
+					}
+					break;
+
+				default:
+					System.out.println("Unknown command: " + command + ". Try again.");
+					break;
 			}
 		}
 	}
