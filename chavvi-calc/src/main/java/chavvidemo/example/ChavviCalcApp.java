@@ -23,7 +23,7 @@ public class ChavviCalcApp {
 		while (running) {
 
 			// read input
-			System.out.print("\nEnter command (h for menu): ");
+			System.out.print("\nEnter command: ");
 			String command = scanner.nextLine().trim().toLowerCase();
 
 			if (command.equals("q")) {
@@ -79,7 +79,6 @@ public class ChavviCalcApp {
 		System.out.println("c : Clear A and B");
 		System.out.println("q : Quit");
 		System.out.println("h : Home");
-		System.out.print("Enter command: ");
 	}
 
 	/**
