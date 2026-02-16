@@ -29,6 +29,8 @@ public class ChavviCalcApp {
 			if (command.equals("q")) {
 				System.out.println("Quit ChavviCalc!");
 				running = false; // Stop the loop (Dừng vòng lặp)
+			} else if (command.equals("h")) {
+				printMenu(); // print menu on demand
 			} else if (command.equals("a")) {
 				valA = getFloatInput("Enter a number for A: ");
 			} else if (command.equals("b")) {
@@ -49,15 +51,13 @@ public class ChavviCalcApp {
 				System.out.printf("%.3f * %.3f = %.3f%n", valA, valB, result);
 			} else if (command.equals("/")) {
 				if (valB == 0) {
-					System.out.println("Error: Division by zero is not allowed.");
+					System.out.println("Error: Division by zero.");
 				} else {
 					float result = valA / valB;
 					System.out.printf("%.3f / %.3f = %.3f%n", valA, valB, result);
 				}
-			} else if (command.equals("h")) {
-				printMenu(); // print menu on demand
 			} else {
-				System.out.println("Unknown command: " + command + " Try again.");
+				System.out.println("Unknown command: " + command + ". Try again.");
 			}
 		}
 	}
@@ -78,6 +78,7 @@ public class ChavviCalcApp {
 		System.out.println("/ : Divide");
 		System.out.println("c : Clear A and B");
 		System.out.println("q : Quit");
+		System.out.println("h : Home");
 		System.out.print("Enter command: ");
 	}
 
