@@ -112,13 +112,22 @@ public class ChavviCalcApp {
 		boolean valid = false;
 
 		while (!valid) {
-			try {
-				System.out.print(prompt);
-				String input = scanner.nextLine().trim();
-				value = Float.parseFloat(input);
-				valid = true; // exit if parsing succeeds
-			} catch (NumberFormatException e) {
-				System.out.println("Error: Invalid number.");
+			System.out.print(prompt);
+			String input = scanner.nextLine().trim().toLowerCase();
+
+			if (input.equals("pi")) {
+				value = (float) Math.PI;
+				valid = true;
+			} else if (input.equals("e")) {
+				value = (float) Math.E;
+				valid = true;
+			} else {
+				try {
+					value = Float.parseFloat(input);
+					valid = true;
+				} catch (NumberFormatException ex) {
+					System.out.println("Error: Invalid number. (Tip: you can type 'pi' or 'e')");
+				}
 			}
 		}
 		return value;
