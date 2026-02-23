@@ -51,7 +51,7 @@ public class ChavviCalcApp {
 				case "c":
 					valA = 0.0f;
 					valB = 0.0f;
-					System.out.println("Values cleared.");
+					System.out.printf("Values cleared: A = %.3f  B = %.3f%n", valA, valB);
 					break;
 
 				case "+":
