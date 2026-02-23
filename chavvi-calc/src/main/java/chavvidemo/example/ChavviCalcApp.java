@@ -38,10 +38,14 @@ public class ChavviCalcApp {
 
 				case "a":
 					valA = getFloatInput("Enter a number for A: ");
+					valA = (float) (Math.floor(valA * 1000) / 1000);
+					System.out.printf("A = %.3f%n", valA);
 					break;
 
 				case "b":
 					valB = getFloatInput("Enter a number for B: ");
+					valB = (float) (Math.floor(valB * 1000) / 1000);
+					System.out.printf("B = %.3f%n", valB);
 					break;
 
 				case "c":
